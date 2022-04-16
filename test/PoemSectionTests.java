@@ -6,8 +6,12 @@ import java.util.Arrays;
 
 public class PoemSectionTests {
 
+    boolean verbose = false;
+
     private void print(String text){
-        System.out.println(text);
+        if(verbose){
+            System.out.println(text);
+        }
     }
 
     // Mass arrange
