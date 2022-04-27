@@ -1,0 +1,71 @@
+h1 {
+    color: #06114F;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+header, footer {
+    text-align: center;
+}
+
+header, main, aside, footer {
+    padding: 2em;
+    border: 2px solid #ca8560;
+    /* f7a579 */
+    border-radius: 1%;
+    /* font-size: 200%; */
+} 
+
+p {
+    color: #3f1651;
+    font-family: 'Thasadith', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    /* border: 2px solid black;
+    border-radius: 2%; */
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        "head head head"
+        "nav nav nav"
+        "sideleft main sideright"
+        "sideleft main sideright"
+        "sideleft main sideright"
+        "sideleft main sideright"
+        "foot foot foot";
+}
+
+.item-head {
+    grid-area: head;
+}
+
+.item-nav {
+    grid-area: nav;
+}
+
+.item-left {
+    grid-area: sideleft;
+}
+
+.item-main {
+    grid-area: main;
+}
+
+.item-right {
+    grid-area: sideright;
+}
+
+.item-foot {
+    grid-area: foot;
+}
+
+h2.footer {
+    color: #06114F;
+    font-family: 'Libre Barcode 39 Text', cursive;
+    font-size: xx-large;
+    text-align: right;
+}
