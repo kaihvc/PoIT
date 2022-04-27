@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.Random;
+import java.io.File;
+import java.util.*;
 
 public class PoemFactory{
 
@@ -87,7 +87,67 @@ class LimerickFactory extends PoemFactory{
 
 class ShakespeareFactory extends PoemFactory{
 
-    public ShakespeareFactory(){}
+    private Map<String, String> replacementMap;
+    private ArrayList<Character> punctuationList;
+
+    public ShakespeareFactory(){
+
+        replacementMap = hashMapFromFile("Shakespeare/replacements.txt");
+        punctuationList = new ArrayList<Character>(Arrays.asList('.', ',', ';', ':', '-'));
+
+    }
+
+    // File reading implementation from https://www.w3schools.com/java/java_files_read.asp
+    private Map<String, String> hashMapFromFile(String filename){
+
+        File dictFile = new File(filename);
+        Map<String, String> dictionary = new HashMap<String, String>();
+
+        try{
+
+            Scanner fileReader = new Scanner(dictFile);
+            while (fileReader.hasNextLine()) {
+                String[] entry = fileReader.nextLine().split(", ");
+                dictionary.put(entry[0], entry[1]);
+            }
+            fileReader.close();
+
+        }catch(Exception e){
+
+            System.out.println("Error creating file reader");
+
+        }
+
+        return dictionary;
+    }
+
+    @Override
+    protected PoemTree composePoemTree(ArrayList<PoemSection> sections){
+
+        ArrayList<PoemSection> shakespeareSections = new ArrayList<PoemSection>();
+
+        for(PoemSection p : sections){
+            String lookupText = p.getText();
+
+            if(replacementMap.containsKey(lookupText)){
+
+                char endChar = lookupText.charAt(lookupText.length() - 1);
+                String replacementText = replacementMap.get(lookupText);
+
+                if(punctuationList.contains(endChar)){
+                    replacementText += endChar;
+                }
+
+                shakespeareSections.add(new Word(replacementText));
+            }else{
+
+                shakespeareSections.add(p);
+
+            }
+        }
+
+        return super.composePoemTree(shakespeareSections);
+    }
 
 }
 

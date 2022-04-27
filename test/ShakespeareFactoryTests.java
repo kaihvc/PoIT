@@ -2,13 +2,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
 
-public class HaikuFactoryTests {
+public class ShakespeareFactoryTests {
 
     // Arrange
     String inputText = "Someday when I'm awfully low when the world is cold i will feel " +
             "a glow just thinking of you and the way you look tonight yes you're lovely " +
             "with your smile so warm";
-    PoemFactory factory = new HaikuFactory();
+    PoemFactory factory = new ShakespeareFactory();
     boolean verbose = true;
 
     private void print(String text){
@@ -18,7 +18,7 @@ public class HaikuFactoryTests {
     }
 
     @Test
-    public void HaikuFactory_WhenGivenText_BuildsPoem(){
+    public void ShakespeareFactory_WhenGivenText_BuildsPoem(){
 
         print("Testing poem composition ---------------");
 

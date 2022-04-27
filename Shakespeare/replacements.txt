@@ -1,3 +1,5 @@
+your, thy
+you, thou
 deduct, abate
 reject, abhor
 servile, abjects
@@ -35,7 +37,7 @@ quite, all amort
 mitigation, allay
 game, tray-trip
 approve, allow
-in, successantly
+in, within
 liquor, alms-drink
 lowest, ames-ace
 anchorite, anchor
@@ -59,7 +61,7 @@ ass, assinego
 reconcile, atone
 stain, maculation
 augury, augur
-old, pantaloon
+old, wizened
 inform., avise
 doll, baby
 singlestick, backswordman
@@ -99,7 +101,8 @@ deceive, bear in hand
 ox, rother
 that, waist
 lunatic, bedlam
-when, when as
+when, when
+cold, chill
 commands, hests
 dance, roundel
 curse, beshrew
@@ -175,7 +178,7 @@ cask, cade
 galloon, caddis
 worsted, caddis-garter
 prison, durance
-my, cake
+my, mine
 kind, tharborough
 whistlelure, call
 drab, tom-boy
@@ -290,7 +293,7 @@ uncurrent, cracked within the ring
 blusterer, cracker
 winding, windring
 garland, crants
-make, take me with you
+make, wreak
 rivulet, creek
 open, dup
 hovel, crib
@@ -302,7 +305,6 @@ crewel, cruel
 portuguese, cruzado
 packcompany, cry
 encourage, cry aim
-i, withal
 sucked, cub-drawn
 bend, curb
 scrupulosity, curiosity
@@ -312,7 +314,6 @@ ill-tempered, curst
 cuisses, cushes
 loose, jay
 horse, cut
-of, loves
 bully, swasher
 take, inform
 foolish, dagonet
@@ -459,7 +460,6 @@ polecat, fitchew
 inflammation, fives
 broad, great morning
 pancake, flap-jack
-with, missingly
 sandbank, flat
 crack, flaw
 outbursts, flaws
@@ -587,7 +587,6 @@ rue, herb of grace
 globe, hercules and his load
 beadsman, hermit
 soundrepresentwhizzing, hewgh
-and, tub
 kinds, high and low
 athead, high-battled
 holiday, high-day
@@ -855,7 +854,7 @@ granddaughter, niece
 night-heron, night-crow
 dark, nighted
 revelry, wassail
-will, nill
+will, shall
 explained, nine-fold
 give, stamp
 simpleton, woodcock
@@ -897,7 +896,6 @@ servant, pantler
 apparitor, paritor
 spermaceti, parmaceti
 quit, part
-a, partial
 havingcoat, parti-coated
 die, pass
 proceedings, passes
@@ -1187,7 +1185,9 @@ bar, sperr
 spider, spinner
 lameness, springhalt
 most, square
-look, squiny
+look, squint
+you're, thou art
+yes, forsooth
 square, squire
 decoydupe, stale
 footed, standing-bowl
@@ -1411,7 +1411,7 @@ whether, whe'r
 pale-faced, whey-face
 until, while
 while, whiles
-the, while
+the, ye
 hurry, whir
 worth, whistlb
 dismisshawk, whistle her off
