@@ -1,15 +1,15 @@
 import org.junit.Test;
 
-import java.util.ArrayList;
+import static org.junit.Assert.assertNotNull;
 
-import static org.junit.Assert.*;
-
-public class PoemFactoryTests {
+public class HaikuFactoryTests {
 
     // Arrange
-    String inputText = "Once upon a midnight dreary while I pondered weak and weary";
-    PoemFactory factory = new PoemFactory();
-    boolean verbose = false;
+    String inputText = "Someday when I'm awfully low when the world is cold i will feel " +
+            "a glow just thinking of you and the way you look tonight yes you're lovely " +
+            "with your smile so warm";
+    PoemFactory factory = new HaikuFactory();
+    boolean verbose = true;
 
     private void print(String text){
         if(verbose){
@@ -24,14 +24,15 @@ public class PoemFactoryTests {
 
         // Act
         Poem poem = factory.buildPoem(inputText);
+        print("Poem created");
 
         // Assert
         assertNotNull("Poem is null", poem);
         String poemText = poem.getPoemText();
         assertNotNull("Poem text is null", poemText);
+        print("Poem text: " + poemText);
 
         print("Poem composition test complete ---------");
-
 
     }
 
