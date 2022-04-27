@@ -15,7 +15,7 @@ public class PoemFactory{
     }
 
     // TODO: set to private
-    public ArrayList<PoemSection> decomposeText(String text){
+    private ArrayList<PoemSection> decomposeText(String text){
 
         ArrayList<PoemSection> words = new ArrayList<PoemSection>();
         String[] textWords = text.split(" "); // TODO: make it deal with newlines etc.
@@ -29,7 +29,7 @@ public class PoemFactory{
 
     // Might be better as a string
     // TODO: set to private
-    public PoemTree composePoemTree(ArrayList<PoemSection> sections){
+    private PoemTree composePoemTree(ArrayList<PoemSection> sections){
 
         // Random
         Random rand = new Random();
@@ -44,11 +44,12 @@ public class PoemFactory{
 
             currentLineComponents.add(p);
 
-            if(rand.nextInt(avgLineLength) == 0){
+            if(rand.nextInt(avgLineLength) == 0 && !currentLineComponents.isEmpty()){
+
                 currentStanzaComponents.add(new Line(new ArrayList<>(currentLineComponents)));
                 currentLineComponents.clear();
 
-                if(rand.nextInt(avgStanzaLength) == 0){
+                if(rand.nextInt(avgStanzaLength) == 0 && !currentStanzaComponents.isEmpty()){
                     poemTreeComponents.add(new Stanza(new ArrayList<>(currentStanzaComponents)));
                     currentStanzaComponents.clear();
                 }
@@ -57,13 +58,13 @@ public class PoemFactory{
 
         }
 
-        currentStanzaComponents.add(new Line(new ArrayList<>(currentLineComponents)));
-        currentLineComponents.clear();
-        poemTreeComponents.add(new Stanza(new ArrayList<>(currentStanzaComponents)));
-        currentStanzaComponents.clear();
-
-        for(PoemSection p : poemTreeComponents){
-            System.out.println(p.getText());
+        if(!currentLineComponents.isEmpty()) {
+            currentStanzaComponents.add(new Line(new ArrayList<>(currentLineComponents)));
+            currentLineComponents.clear();
+        }
+        if(!currentStanzaComponents.isEmpty()){
+            poemTreeComponents.add(new Stanza(new ArrayList<>(currentStanzaComponents)));
+            currentStanzaComponents.clear();
         }
 
         return new PoemTree(poemTreeComponents);

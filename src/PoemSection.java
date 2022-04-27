@@ -53,7 +53,7 @@ class PoemTree extends PoemSection {
     @Override
     public String getText(){
 
-        String poemText = components.get(0).getText();
+        String poemText = components.isEmpty() ? "" : components.get(0).getText();
         for(int i = 1; i < components.size(); i++){
             poemText = poemText + "\n\n" + components.get(i).getText();
         }
@@ -72,7 +72,7 @@ class Stanza extends PoemSection {
     @Override
     public String getText(){
 
-        String poemText = components.get(0).getText();
+        String poemText = components.isEmpty() ? "" : components.get(0).getText();
         for(int i = 1; i < components.size(); i++){
             poemText = poemText + "\n" + components.get(i).getText();
         }
@@ -91,7 +91,7 @@ class Line extends PoemSection {
     @Override
     public String getText(){
 
-        String poemText = components.get(0).getText();
+        String poemText = components.isEmpty() ? "" : components.get(0).getText();
         for(int i = 1; i < components.size(); i++){
             poemText = poemText + " " + components.get(i).getText();
         }
